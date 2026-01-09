@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Login/Signup Section -->
+    <section id="auth-section">
+      <h1>Twitter Clone</h1>
+      <div id="login-form" class="auth-form">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button id="login-btn">Login</button>
+        <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+      </div>
+      <div id="signup-form" class="auth-form" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username" required />
+        <input type="password" id="signup-password" placeholder="Password" required />
+        <label for="profile-photo">Upload Profile Photo:</label>
+        <input type="file" id="profile-photo" accept="image/*" required />
+        <button id="signup-btn">Sign Up</button>
+        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+      </div>
+      <p id="auth-message"></p>
+    </section>
+
+    <!-- User Dashboard -->
+    <section id="dashboard-section" style="display: none;">
+      <header>
+        <div class="profile">
+          <img id="profile-picture" src="" alt="Profile Photo">
+          <h2 id="welcome-message"></h2>
+        </div>
+        <button id="logout">Logout</button>
+      </header>
+      <section id="user-actions">
+        <h2>Follow Users</h2>
+        <div id="follow-list"></div>
+      </section>
+      <section id="tweet-form">
+        <textarea id="tweet-input" placeholder="What's happening?" maxlength="280"></textarea>
+        <input type="file" id="tweet-image" accept="image/*" />
+        <button id="post-tweet">Tweet</button>
+      </section>
+      <section id="tweets-container">
+        <h2>Your Tweets</h2>
+        <div id="tweets-feed"></div>
+      </section>
+      <section id="account-management">
+        <h2>Account Settings</h2>
+        <button id="delete-account">Delete Account</button>
+      </section>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
